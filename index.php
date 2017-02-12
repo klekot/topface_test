@@ -11,6 +11,9 @@
     <body>
         <header>
             <h1>ТопФейс — тестовое задание</h1>
+            <div id="flash-event">
+                <span id="hidden"></span>
+            </div>
         </header>
         <section class="centered-wrapper">
             <div class="centered-content">
@@ -21,10 +24,7 @@
         <footer>
             <p class="copyright">Игорь Клекотнев &copy 2017</p>
         </footer>
-        <script
-            src="https://code.jquery.com/jquery-3.1.1.min.js"
-            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-            crossorigin="anonymous"></script>
-        <script type="text/javascript" href="js/main.js"></script>
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script type="text/javascript" src="/js/main.js"></script>
     </body>
 </html>

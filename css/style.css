@@ -21,10 +21,10 @@ section {
     min-height: 100%;
     height: auto !important;
     height: 100%;
-    margin: 0 auto -130px; /* the bottom margin is the negative value of the footer's height */
+    margin: 0 auto -160px; /* the bottom margin is the negative value of the footer's height */
 }
 footer, .push {
-    height: 130px; /* .push must be the same height as .footer */
+    height: 160px; /* .push must be the same height as .footer */
 }
 .copyright {
     text-align: center;
@@ -44,10 +44,64 @@ footer, .push {
 .centered-content {
     display: inline-block;
     vertical-align: middle;
-    margin-top: 50px;
     color: #ffffff;
 }
-
+.profile {
+    max-width: 500px;
+    padding: 10px 20px;
+    background: #f4f7f8;
+    margin: 10px auto;
+    padding: 20px;
+    background: #f4f7f8;
+    border-radius: 8px;
+    font-family: 'Cormorant SC', serif;
+    color: #004962;
+}
+.profile-buttons {
+    width: 100%;
+}
+#logoutForm {
+    position: relative;
+    display: inline-block;
+    width: 70%;
+}
+#signoutForm {
+    position: relative;
+    display: inline-block;
+    width: 70%;
+}
+#logoutButton {
+    padding: 19px 39px 18px 39px;
+    color: #FFF;
+    margin: 0 auto;
+    background: #1abc9c;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    width: 100%;
+    border: 1px solid #16a085;
+    border-width: 1px 1px 3px;
+    margin-bottom: 10px;
+}
+#logoutButton:hover {
+    background: #109177;
+}
+#signoutButton {
+    padding: 19px 39px 18px 39px;
+    color: #FFF;
+    margin: 0 auto;
+    background: #ff0000;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    width: 100%;
+    border: 1px solid #ff0033;
+    border-width: 1px 1px 3px;
+    margin-bottom: 10px;
+}
+#signoutButton:hover {
+    background: #ff0055;
+}
 .form-style {
     max-width: 500px;
     padding: 10px 20px;
@@ -126,7 +180,6 @@ footer, .push {
     text-shadow: 0 1px 0 rgba(255,255,255,0.2);
     border-radius: 15px 15px 15px 0px;
 }
-
 .form-style input[type="submit"] {
     position: relative;
     display: block;
@@ -144,4 +197,19 @@ footer, .push {
 }
 .form-style input[type="submit"]:hover {
     background: #109177;
+}
+#flash-event {
+    height: 30px;
+    text-align: center;
+    color: #ffffff;
+}
+#hidden {
+  display: none;
+}
+.number-404 {
+    font-size: 150px;
+}
+.not-found {
+    font-size: 20px;
+    margin-top: -140px;
 }

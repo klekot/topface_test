@@ -1,9 +1,10 @@
+<h2>Регистрация на сайте</h2>
 <div class="form-style">
 <form id="signUpForm" class="" method="POST" action="/auth.php">
 <fieldset>
 <legend><span class="number">1</span> Данные для входа</legend>
-<input type="email" id="email" name="email" placeholder="Ваш Email *"/>
-<input type="password" id="password" name="password" value="" class="" placeholder="Ваш пароль *"/>
+<input id="signup-email" type="email" id="email" name="email" placeholder="Ваш Email *"/>
+<input id="signup-password" type="password" id="password" name="password" value="" class="" placeholder="Ваш пароль *"/>
 <legend><span class="number">2</span> Личная информация</legend>
 <input type="text" id="first_name" name="first_name" placeholder="Ваше имя *"/>
 <div class="gender-selector" id="sex-div">

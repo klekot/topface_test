@@ -2,11 +2,7 @@
 session_start();
 require_once 'months.php';
  ?>
-<!DOCTYPE html>
-<html>
-<head>
-</head>
-<body>
+<div class="profile">
     <h1>Здравствуйте, <?= $_SESSION['current_user']['first_name'] ?>!</h1>
     <h3>Информация о пользователе:</h3>
     <p>
@@ -36,11 +32,12 @@ require_once 'months.php';
         Ваш пароль: <?= $_SESSION['current_user']['password'] ?>
     </p>
     <br />
-    <form id="logoutForm" class="" method="POST" action="/logout.php">
-        <button type="submit">Выйти из аккаунта</button>
-    </form>
-    <form id="signoutForm" class="" method="DELETE" action="/signout.php">
-        <button type="submit">Удалить свой аккаунт</button>
-    </form>
-</body>
-</html>
+    <div class="profile-buttons">
+        <form id="logoutForm" class="" method="POST" action="/logout.php">
+            <button id="logoutButton" type="submit">Выйти из аккаунта</button>
+        </form>
+        <form id="signoutForm" class="" method="DELETE" action="/signout.php">
+            <button id="signoutButton" type="submit">Удалить свой аккаунт</button>
+        </form>
+    </div>
+</div>

@@ -9,9 +9,6 @@ switch ($_SERVER['REQUEST_URI']) {
     case '/':
         require 'login.php';
         break;
-    case '/welcome':
-        require 'welcome.php';
-        break;
     case '/login':
         require 'login.php';
         break;

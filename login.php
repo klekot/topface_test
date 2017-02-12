@@ -1,20 +1,10 @@
-<!--
-<form id="loginUpForm" class="" method="POST" action="/auth.php">
-    <div>
-        <input type="text" id="email" name="email" value="" class="" placeholder="Email"/>
-    </div>
-    <div>
-        <input type="password" id="password" name="password" value="" class="" placeholder="Пароль"/>
-    </div>
-    <button type="submit">Войти</button>
-</form>
--->
+<h2>Вход в аккаунт</h2>
 <div class="form-style">
 <form id="loginUpForm" class="" method="POST" action="/auth.php">
 <fieldset>
 <legend>Введите ваши данные:</legend>
-<input type="email" name="email" placeholder="Ваш Email *">
-<input type="password" name="password" placeholder="Ваш пароль *"/>
+<input id="login-email" type="email" name="email" placeholder="Ваш Email *">
+<input id="login-password" type="password" name="password" placeholder="Ваш пароль *"/>
 </fieldset>
 <input type="submit" value="Войти" />
 </form>
