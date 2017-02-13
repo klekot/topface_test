@@ -2,6 +2,11 @@
 require_once 'settings.php';
 require_once 'db_connect.php';
 
+/**
+ * Класс предоставляет возможность запрета на повторную регистрацию с определённого IP-адреса
+ * в течение времени, заданного константой "FORBIDDEN_PERIOD" в файле "settings.php".
+ */
+
 class DoubleRegChecker
 {
     public $ip_address;
@@ -11,6 +16,13 @@ class DoubleRegChecker
         $this->ip_address = $client_ip;
     }
 
+    /**
+     * Метод позволяет определить возможность регистрации с заданного IP-адреса.
+     * Учитывается фактор наличия или отсутствия данного адреса в БД,
+     * а также времени, в течение которого регистрация с заданного IP-адреса запрещена.
+     *
+     * @return boolean
+     */
     public function isAvailable()
     {
         $conn = new dbConnect();
@@ -19,7 +31,7 @@ class DoubleRegChecker
         if ($reg_time != 0) {
             if (time() - $reg_time > FORBIDDEN_PERIOD) {
                 $conn = new dbConnect();
-                // Обновляем время регистрации с ip-адреса клиента в БД
+                /* Обновляем время регистрации с IP-адреса клиента в БД */
                 $conn->updateRegTime($_SERVER['REMOTE_ADDR']);
                 unset($conn);
                 return true;
@@ -31,6 +43,12 @@ class DoubleRegChecker
         }
     }
 
+    /**
+     * Метод позволяет определить время, оставшееся до истечения срока запрета
+     * на регистрацию с определённого IP-адреса.
+     *
+     * @return integer
+     */
     public function timeRemains()
     {
         $conn = new dbConnect();

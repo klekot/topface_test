@@ -69,7 +69,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (11,'Igor','klekotnev@gmail.com','111',1,1,2001,1,'sdasd'),(45,'Клекотнев Игорь Иванович, эсквайр','igor@klekotnev.com','111',16,3,1972,1,'Санкт-Петербург'),(46,'qwe','asd@sdf.ru','111',19,1,1983,1,'asd');
+INSERT INTO `users` VALUES (11,'Igor','klekotnev@gmail.com','111',16,3,1972,1,'Санкт-Петербург');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
